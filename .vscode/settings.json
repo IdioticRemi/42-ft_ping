@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"condition_variable": "cpp",
+		"socket": "cpp",
+		"future": "cpp",
+		"cerrno": "c",
+		"internet": "c",
+		"typeinfo": "c"
+	}
+}
