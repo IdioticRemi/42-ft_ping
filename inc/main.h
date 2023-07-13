@@ -15,13 +15,12 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netdb.h>
+# include <netinet/in.h>
+# include <netinet/ip.h>
+# include <netinet/ip_icmp.h>
 
 // gettimeofday
 #include <sys/time.h>
 
 // ours
 #include "messages.h"
-
-#define PING_PACKET_SIZE 64
-#define PING_PORT_NO 0
-#define PING_TIMEOUT 1000

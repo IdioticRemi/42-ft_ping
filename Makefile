@@ -9,11 +9,11 @@ RST			=	\033[0m
 SRC			=	$(shell find ./src -type f -name "*.c" | cut -c 3-)
 HEADER		=	$(shell find ./inc -type f -name "*.h" | cut -c 3-)
 
-OBJ			=	$(SRC:.cpp=.o)
+OBJ			=	$(SRC:.c=.o)
 
 CC			=	gcc
 FLAGS		=	-Wall -Wextra -fsanitize=address -g3
-FLAGS_H		=	-Iinc/
+FLAGS_H		=	-I inc/
 NAME		=	ft_ping
 
 all: $(NAME)
@@ -32,7 +32,7 @@ print_header:
 	echo "\033[1;34m\033[5G=======================> By kbarbry ft tjolivea <======================="
 .PHONY: print_header
 
-%.o: %.cpp $(HEADER)
+%.o: %.c $(HEADER)
 	$(CC) $(FLAGS) $(FLAGS_H) -c $< -o $@
 	echo "$(BBLU)[$(NAME) OBJ] :$(RST) $@ $(BGREEN)\033[47G[✔]$(RST)"
 
