@@ -12,7 +12,7 @@ HEADER		=	$(shell find ./inc -type f -name "*.h" | cut -c 3-)
 OBJ			=	$(SRC:.c=.o)
 
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -fsanitize=address -g3
+FLAGS		=	-Wall -Werror -Wextra
 FLAGS_H		=	-I inc/
 NAME		=	ft_ping
 
